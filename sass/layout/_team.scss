@@ -1,0 +1,114 @@
+.team {
+  background-color: var(--team-background-color);
+}
+
+// .team__title {
+//   font-weight: 700;
+//   font-size: 36px;
+//   line-height: calc(42 / 36);
+//   text-align: center;
+//   letter-spacing: 0.03em;
+//   color: var(--main-title-color);
+//   margin-bottom: 50px;
+// }
+.team-list {
+  // display: flex;
+  margin-bottom: -30px;
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -30px;
+  }
+}
+
+.team-list__item {
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  // &:not(:last-child) {
+  //   margin-right: 30px;
+  // }
+  margin-bottom: 30px;
+  width: 100%;
+  @media screen and (min-width: 768px) {
+    width: calc(100% / 2 - 30px);
+    margin-left: 30px;
+  }
+  @media screen and (min-width: 1200px) {
+    width: calc(100% / 4 - 30px);
+  }
+}
+
+.team-list__img {
+  width: 100%;
+}
+
+.team-bottom {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  border: 1px solid #eeeeee;
+  border-top: none;
+  background-color: #ffffff;
+  border-radius: 0px 0px 4px 4px;
+}
+
+.team-bottom__title {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: calc(19 / 16);
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--main-title-color);
+  margin-bottom: 10px;
+}
+
+.team-bottom__text {
+  font-size: 16px;
+  line-height: calc(19 / 16);
+  text-align: center;
+  letter-spacing: 0.03em;
+  margin-bottom: 16px;
+}
+
+.team-sosial-list {
+  display: flex;
+  justify-content: center;
+}
+
+.team-sosial-list__item {
+  width: 44px;
+  height: 44px;
+  & + & {
+    margin-left: 10px;
+  }
+}
+
+// .team-sosial-item {
+//   width: 44px;
+//   height: 44px;
+// }
+
+// .team-sosial-item + .team-sosial-item {
+//   margin-left: 10px;
+// }
+
+.team-sosial-list__link {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+  color: #afb1b8;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover,
+  &:focus {
+    background-color: var(--accent-color);
+    color: #ffffff;
+  }
+}
+
+.team-sosial-list__icon {
+  fill: currentColor;
+}
