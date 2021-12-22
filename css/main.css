@@ -317,13 +317,11 @@ body {
 }
 
 .header {
-  padding-top: 24px;
-  padding-bottom: 25px;
   border-bottom: 1px solid #ececec;
 }
 
 .header-list {
-  display: flex;
+  display: none;
 }
 
 .header__nav {
@@ -337,18 +335,19 @@ body {
 }
 
 .header-contact {
-  margin-left: auto;
-  display: flex;
+  display: none;
 }
 
 .header__logo {
   font-family: Raleway;
   font-weight: 700;
-  font-size: 26px;
-  line-height: calc(31 / 26);
+  font-size: 24px;
+  line-height: calc(28 / 24);
   letter-spacing: 0.03em;
   color: var(--accent-color);
   margin-right: 93px;
+  padding-top: 16px;
+  padding-bottom: 16px;
 }
 
 .header__logo-part {
@@ -419,10 +418,105 @@ body {
   fill: currentColor;
 }
 
+.mob-menu-open {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+  border: transparent;
+  background-color: #ffffff;
+}
+
+.mob-menu-close {
+  position: absolute;
+  top: -38px;
+  right: 15px;
+  display: inline-flex;
+  padding: 0;
+  margin: 0;
+  border: none;
+  background-color: transparent;
+}
+
+.mob-menu {
+  position: fixed;
+  top: 0;
+  background-color: #ffffff;
+  width: 100vw;
+  height: 100vh;
+  padding-top: 48px;
+  padding-bottom: 48px;
+  padding-left: 40px;
+}
+
+.mob-menu .container {
+  position: relative;
+}
+
+.mob-menu-item {
+  margin-bottom: 32px;
+}
+
+.mob-menu-item:last-child {
+  margin-bottom: 0;
+}
+
+.mob-menu-item .mob-menu-link {
+  font-weight: 500;
+  font-size: 40px;
+  line-height: calc(47 / 40);
+  text-align: center;
+  letter-spacing: 0.02em;
+  color: var(--header-link-color);
+}
+
+.mob-contacts-list {
+  margin-bottom: 64px;
+}
+
+.mob-contacts-item {
+  margin-bottom: 32px;
+}
+
+.mob-contacts-item:last-child {
+  margin-bottom: 0;
+}
+
+.mob-contacts-link {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: calc(28 / 24);
+  letter-spacing: 0.02em;
+  color: var(--header-contact-color);
+}
+
+.mob-tel-number {
+  font-size: 34px;
+  line-height: calc(40 / 34);
+}
+
+.mob-sosial-list {
+  display: flex;
+}
+
+.mob-sosial-item:not(:last-child) {
+  margin-right: 10px;
+  padding-right: 10px;
+  border-right: 1px solid rgba(33, 33, 33, 0.2);
+}
+
+.mob-sosial-link {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.22;
+  letter-spacing: 0.02em;
+  color: var(--accent-color);
+}
+
 .hero {
-  background-color: #c4c4c4;
   margin: 0 auto;
   max-width: 1600px;
+  background-color: #c4c4c4;
   background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero-background.jpg);
   background-repeat: no-repeat;
   background-position: center;
@@ -454,7 +548,7 @@ body {
   .hero__title {
     font-size: 44px;
     line-height: 1.36;
-    max-width: 676px;
+    max-width: 696px;
   }
 }
 
