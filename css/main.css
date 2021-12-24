@@ -37,7 +37,7 @@ ul {
 
 .img {
   display: block;
-  max-width: 100%;
+  width: 100%;
   height: auto;
 }
 
@@ -517,6 +517,7 @@ body {
 .mob-menu {
   position: fixed;
   top: 0;
+  z-index: 1;
   background-color: #ffffff;
   width: 100vw;
   height: 100vh;
@@ -1162,9 +1163,23 @@ body {
 }
 
 .filtr-list {
+  margin-bottom: 40px;
   display: flex;
-  justify-content: center;
-  margin-bottom: 50px;
+  flex-wrap: wrap;
+}
+
+@media screen and (min-width: 768px) {
+  .filtr-list {
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .filtr-list {
+    margin-bottom: 50px;
+  }
 }
 
 .filtr-item {
@@ -1173,6 +1188,15 @@ body {
 
 .filtr-item:last-child {
   margin-right: 0;
+}
+
+@media screen and (max-width: 767px) {
+  .filtr-item {
+    margin-bottom: 15px;
+  }
+  .filtr-item:nth-last-child(-n + 2) {
+    margin-bottom: 0;
+  }
 }
 
 .filtr-btn {
@@ -1197,16 +1221,33 @@ body {
 }
 
 .projects-list {
-  display: flex;
-  flex-wrap: wrap;
-  margin-left: -30px;
-  margin-top: -30px;
+  margin-bottom: -30px;
+}
+
+@media screen and (min-width: 768px) {
+  .projects-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -30px;
+  }
 }
 
 .projects-item {
-  margin-left: 30px;
-  margin-top: 30px;
-  flex-basis: calc((100% - 90px) / 3);
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+@media screen and (min-width: 768px) {
+  .projects-item {
+    width: calc(100% / 2 - 30px);
+    margin-left: 30px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .projects-item {
+    width: calc(100% / 3 - 30px);
+  }
 }
 
 .progect-border {
